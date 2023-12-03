@@ -1,16 +1,47 @@
-<!-- app.component.html -->
+
 <form (ngSubmit)="onSubmit()">
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre" [(ngModel)]="usuaio.nombre" required>
-  <label for="nombre">Apellido:</label>
-  <input type="text" id="apellido" name="apellido" [(ngModel)]="usuaio.apellido" required>
-  <label for="nombre">Cargo:</label>
-  <input type="text" id="cargo" name="cargo" [(ngModel)]="usuaio.cargo" required>
-  <label for="nombre">Correo:</label>
-  <input type="text" id="correo" name="correo" [(ngModel)]="usuaio.correo" required>
-  <label for="nombre">Edad:</label>
-  <input type="text" id="edad" name="edad" [(ngModel)]="usuaio.edad" required>
 
+  <div class="row justify-content-md-center">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre"placeholder="Ingrese su nombre" 
+             [(ngModel)]="usuaio.nombre"
+      >  
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="form-group">
+      <label for="nombre">Apellido</label>
+      <input type="text" class="form-control" id="apellido" name="apellido"placeholder="Ingrese su apellido" 
+             [(ngModel)]="usuaio.apellido"
+      >  
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="form-group">
+      <label for="nombre">Cargo</label>
+      <input type="text" class="form-control" id="cargo" name="cargo"placeholder="Ingrese su cargo" 
+             [(ngModel)]="usuaio.cargo"
+      >  
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="form-group">
+      <label for="nombre">Correo</label>
+      <input type="text" class="form-control" id="correo" name="correo"placeholder="Ingrese su correo" 
+             [(ngModel)]="usuaio.correo"
+      >  
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="form-group">
+      <label for="nombre">Edad</label>
+      <input type="text" class="form-control" id="edad" name="edad"placeholder="Ingrese su edad" 
+             [(ngModel)]="usuaio.edad"
+      >  
+    </div>
+  </div>
+ 
 
-  <button type="submit">Enviar</button>
+  <button type="submit" class="btn btn-info">Enviar</button>
 </form>
