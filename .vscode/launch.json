@@ -4,7 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "PeticionesApplication",
+            "request": "launch",
+            "mainClass": "com.example.peticiones.PeticionesApplication",
+            "projectName": "peticiones"
+        },
+        {
+            "type": "java",
+            "name": "BackendApplication",
+            "request": "launch",
+            "mainClass": "com.backend.backend.BackendApplication",
+            "projectName": "backend"
+        },
         {
             "name": "Attach to Chrome",
             "port": 4200,
