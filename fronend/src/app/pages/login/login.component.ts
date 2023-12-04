@@ -9,6 +9,7 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class LoginComponent implements OnInit {
   usuaio: User = {};
+  usuario: User[] = [];
 
   constructor(private loginservice: LoginService) {}
   ngOnInit(): void {
@@ -17,10 +18,13 @@ export class LoginComponent implements OnInit {
   getuser() {
     return this.loginservice.obtenerUser().subscribe((data) => {
       //creo lista
-      const lista = [];
+      // const lista = [];
       //agrego a lista
-      lista.push(data);
-      console.log(data);
+      // lista.push(data);
+      // console.log(data);
+      this.usuario=data;
+
+
     });
   }
   onSubmit() {

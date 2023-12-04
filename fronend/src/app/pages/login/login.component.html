@@ -1,47 +1,106 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <!-- Contenido de la columna aquí -->
+      <form (ngSubmit)="onSubmit()">
+        <div class="row justify-content-md-center">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese su nombre"
+              [(ngModel)]="usuaio.nombre"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="form-group">
+            <label for="nombre">Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              id="apellido"
+              name="apellido"
+              placeholder="Ingrese su apellido"
+              [(ngModel)]="usuaio.apellido"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="form-group">
+            <label for="nombre">Cargo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cargo"
+              name="cargo"
+              placeholder="Ingrese su cargo"
+              [(ngModel)]="usuaio.cargo"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="form-group">
+            <label for="nombre">Correo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="correo"
+              name="correo"
+              placeholder="Ingrese su correo"
+              [(ngModel)]="usuaio.correo"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="form-group">
+            <label for="nombre">Edad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="edad"
+              name="edad"
+              placeholder="Ingrese su edad"
+              [(ngModel)]="usuaio.edad"
+            />
+          </div>
+        </div>
 
-<form (ngSubmit)="onSubmit()">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form> 
+    </div>
+    <div class="col-sm-6 ">
+      <!-- Otra columna (de 4 columnas) para dispositivos medianos aquí -->
+      <table class="table">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of usuario">
+            <td>{{ user.nombre }}</td>
+            <td>{{ user.apellido }}</td>
+            <td>{{ user.cargo }}</td>
+            <td>{{ user.edad }}</td>
+            <!-- Otros campos según tus necesidades -->
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+</div>
 
-  <div class="row justify-content-md-center">
-    <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input type="text" class="form-control" id="nombre" name="nombre"placeholder="Ingrese su nombre" 
-             [(ngModel)]="usuaio.nombre"
-      >  
-    </div>
-  </div>
-  <div class="row justify-content-md-center">
-    <div class="form-group">
-      <label for="nombre">Apellido</label>
-      <input type="text" class="form-control" id="apellido" name="apellido"placeholder="Ingrese su apellido" 
-             [(ngModel)]="usuaio.apellido"
-      >  
-    </div>
-  </div>
-  <div class="row justify-content-md-center">
-    <div class="form-group">
-      <label for="nombre">Cargo</label>
-      <input type="text" class="form-control" id="cargo" name="cargo"placeholder="Ingrese su cargo" 
-             [(ngModel)]="usuaio.cargo"
-      >  
-    </div>
-  </div>
-  <div class="row justify-content-md-center">
-    <div class="form-group">
-      <label for="nombre">Correo</label>
-      <input type="text" class="form-control" id="correo" name="correo"placeholder="Ingrese su correo" 
-             [(ngModel)]="usuaio.correo"
-      >  
-    </div>
-  </div>
-  <div class="row justify-content-md-center">
-    <div class="form-group">
-      <label for="nombre">Edad</label>
-      <input type="text" class="form-control" id="edad" name="edad"placeholder="Ingrese su edad" 
-             [(ngModel)]="usuaio.edad"
-      >  
-    </div>
-  </div>
+        
  
 
-  <button type="submit" class="btn btn-info">Enviar</button>
-</form>
+<br />
+
+
